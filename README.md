@@ -34,7 +34,7 @@ So this tool detects that loop and never feeds it. Every indicator tracks a warn
 | Stubs without a response fill "every target's response signal with non-responses" | §10.6 | Share of stubs with no editorial content |
 | An aggregator "never re-emits" and never stubs for its members | §13.5 | Items that re-emit others' content |
 | The blogroll "claims no completeness" | §11 | Blygs reachable only through the public list, against blygs reachable through blogrolls |
-| Attention concentrating on a few origins | the refusals together | One network-wide measure of how skewed links are, with no names |
+| Attention concentrating on a few origins | §16.8 | One network-wide measure of how skewed links are, with no names |
 
 No indicator ranks a person or a blyg. With 25 blygs even an unnamed concentration figure points at someone, so the last row is shown as a trend only until the network is larger. The indicator list is offered to the protocol's authors for comment before the first full crawl.
 
