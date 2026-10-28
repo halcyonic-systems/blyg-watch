@@ -44,7 +44,7 @@ In Bunge's order: a problem stated in terms of measurement, then the concept, th
 
 1. **The question**, above.
 2. **The model** (`model/`, not yet): Facets models of a blyg and of the network. They name the flows the measurement counts and show where history sits.
-3. **The proof** (`Blygger/`, not yet): Lean statements of the spec's guarantees, proving which links a later crawl can recover and which only a dated snapshot keeps.
+3. **The proof** (`journal/`, begun): Lean statements of the spec's guarantees, proving which links a later crawl can recover and which only a dated snapshot keeps.
 4. **The data** (`crawl/`, `data/`, not yet): dated snapshots of the public list and the concentration measured from them. The dashboard grows out of this step.
 
 ## The site
@@ -63,4 +63,4 @@ The Blygger conformance toolkit (github.com/blygger/blygger-spec, PR #11, by Ane
 - Model runs are conditional: if this structure and these numbers, then this.
 - Measurements cover the blygs on the public list at each snapshot, not every blyg that exists.
 
-Nothing here is proven until `lake build` checks it.
+Nothing here is proven until `lake build` in `journal/` checks it.

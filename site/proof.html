@@ -48,7 +48,7 @@
       <div><dt><a href="https://arxiv.org/abs/2407.01688">Cedar, Amazon, 2024</a></dt><dd>A Lean model with proofs, paired with testing the real implementation against it. blyg-watch pairs Lean with a crawl of real blygs.</dd></div>
       <div><dt><a href="https://arxiv.org/abs/1707.01747">Gomes, Kleppmann et al., 2017</a></dt><dd>Replicated-data algorithms proven in Isabelle, after many published ones turned out wrong. The closest precedent for a decentralized system's guarantees.</dd></div>
     </dl>
-    <p class="note">On names: "Lean Ethereum" means a leaner protocol, a simplification program with formal verification as one of its values (<a href="https://blog.ethereum.org/2025/07/31/lean-ethereum">Drake, 2025</a>). Lean the prover is the tool some of that work uses. Venkatesh Rao kept Blygger's spec minimal on purpose; stating its guarantees formally is the same simplify-then-verify pairing, at much smaller stakes.</p>
+    <p class="note">On names: "Lean Ethereum" means a leaner protocol, a simplification program with formal verification as one of its values (<a href="https://blog.ethereum.org/2025/07/31/lean-ethereum">Drake, 2025</a>). Lean the prover is the tool some of that work uses: the <a href="https://strawmap.org">strawmap</a> (updated 23 October 2026) plans cryptography specs and the consensus state transition function in Lean 4. Venkatesh Rao kept Blygger's spec minimal on purpose; stating its guarantees formally is the same simplify-then-verify pairing, at much smaller stakes.</p>
   </section>
 
   <section class="wrap block" aria-labelledby="p-h">
@@ -64,7 +64,7 @@
     <ul class="plain">
       <li>The Lean work models <a href="https://github.com/blygger/blygger-spec/blob/main/docs/protocol-v0.4.md">spec v0.4</a> as written, a pre-1.0 draft.</li>
       <li>It says nothing about any client, or about whether a publisher keeps its promises. Hosting can lapse.</li>
-      <li>Nothing is proven until <code>lake build</code> checks it.</li>
+      <li>Nothing is proven until Lean checks it when the journal is built.</li>
     </ul>
   </section>
 

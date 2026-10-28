@@ -7,7 +7,7 @@
 - [AGENTS.md](AGENTS.md): order of work and rules for agents
 
 ## Parts
-- [Lean](Blygger/): spec v0.4 guarantees and what a later crawl can recover (not yet)
+- [Lean proof journal](journal/): spec v0.4 guarantees and what a later crawl can recover, written entry by entry (begun)
 - [Models](model/): Facets models of a blyg and of the network (not yet)
 - [Measurement](crawl/): crawler, metrics and dated snapshots in data/ (not yet)
 
