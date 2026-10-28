@@ -45,7 +45,11 @@ In Bunge's order: a problem stated in terms of measurement, then the concept, th
 1. **The question**, above.
 2. **The model** (`model/`, not yet): Facets models of a blyg and of the network. They name the flows the measurement counts and show where history sits.
 3. **The proof** (`Blygger/`, not yet): Lean statements of the spec's guarantees, proving which links a later crawl can recover and which only a dated snapshot keeps.
-4. **The data** (`crawl/`, `data/`, not yet): dated snapshots of the public list and the concentration measured from them. A dashboard and a written chapter (Verso, its own package) come later.
+4. **The data** (`crawl/`, `data/`, not yet): dated snapshots of the public list and the concentration measured from them. The dashboard grows out of this step.
+
+## The site
+
+`site/` is one static page with no build step, laid out like this README: the question and the reader's job, the four steps of the path with their status, what the crawl cannot see, and the indicators. A GitHub Actions workflow publishes `site/` to GitHub Pages once the repo is public. Later, the Data step becomes the dashboard, drawing its charts from `data/*.json`, and the Verso chapter is published as its own linked page.
 
 Agents read `AGENTS.md`; language models start at `llms.txt`.
 
