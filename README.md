@@ -20,6 +20,24 @@ Blygger refuses replies, counts, a follower graph and ranking. It leaves discove
 
 Snapshots on a schedule recover part of what a single later crawl would miss.
 
+## Measuring without bringing back counts
+
+Blygger refuses counts on purpose. A machine-readable list of who responded is "the first surface a count could attach to" (§16.6d), and a reader may order what it reads provided "nothing derived is published" (§16.6d). A public leaderboard of who is quoted would bring back the loop the protocol removes.
+
+So this tool detects that loop and never feeds it. Every indicator tracks a warning the spec itself names, and cites it:
+
+| The spec's warning | Where | Indicator |
+|---|---|---|
+| "Anything that can serve files can serve a blyg" | §1, §4 | How many blygs depend on one client or one host |
+| The generator string is "the only census of the ecosystem that exists without anyone registering anything" | §3.2 | Client diversity over time |
+| "every unpinned remote quote is a veto held by a stranger" | §10.2 | Share of cross-blyg quotes that point at unpinned versions |
+| Stubs without a response fill "every target's response signal with non-responses" | §10.6 | Share of stubs with no editorial content |
+| An aggregator "never re-emits" and never stubs for its members | §13.5 | Items that re-emit others' content |
+| The blogroll "claims no completeness" | §11 | Blygs reachable only through the public list, against blygs reachable through blogrolls |
+| Attention concentrating on a few origins | the refusals together | One network-wide measure of how skewed links are, with no names |
+
+No indicator ranks a person or a blyg. With 25 blygs even an unnamed concentration figure points at someone, so the last row is shown as a trend only until the network is larger. The indicator list is offered to the protocol's authors for comment before the first full crawl.
+
 ## The path
 
 In Bunge's order: a problem stated in terms of measurement, then the concept, the math, the application.

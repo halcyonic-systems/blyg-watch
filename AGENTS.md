@@ -14,6 +14,7 @@ Question, then concept, then math, then application:
 - **Cite the spec by section** (`docs/protocol-v0.4.md` in github.com/blygger/blygger-spec), with a short quote.
 - **No live crawling** until crawl etiquette is settled and written here. Develop against the conformance samples in blygger-spec (`conformance/schemas/samples/`).
 - **Build on what exists.** The conformance toolkit (blygger-spec PR #11) already crawls the directory and draws a network report. Extend or reuse it before writing a new crawler, and credit it.
+- **Detect, never feed.** Every indicator tracks a warning the spec names and cites it (README table). Never publish a ranking, leaderboard or per-blyg count of who is quoted, stubbed or forked.
 - **Snapshots are append-only.** A file under `data/` is never edited after its date.
 - **Names match.** A measured series carries the name of the model flow it measures; a test checks this.
 - **Public data only.** Everything read is published on the blygs themselves. Nothing private, no inferred identities.
