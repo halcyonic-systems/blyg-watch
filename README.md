@@ -4,7 +4,19 @@ Watching the Blygger publishing network (https://blygger.org) as a system.
 
 ## The first question
 
-Will Blygger stay decentralized as it grows?
+**Is the thicket concentrating?** Will Blygger stay decentralized as it grows? Part of the answer the protocol forgets on purpose.
+
+**Your job: check what can be seen, and what can't.** The crawl sees every blyg on the public list, every item in each archive index, and the links inside each item's latest version and its pinned versions. It cannot see:
+
+| Not visible | Why |
+|---|---|
+| Older versions of an item, unless pinned | No route serves an unpinned older version (spec v0.4 §8.4) |
+| Quotes and stubs in an item later withdrawn | Withdrawal drops `stub_of`, `generated` and `transclusions` (§9) |
+| Who links *to* a blyg | Mentions go to each blyg's inbox, not to its public files |
+| Who follows whom | Subscriptions are private; there is no follower graph by design (§16.8) |
+| Blygs not on the public list | The crawl starts from blygger.com's `blygs.opml` |
+
+Snapshots on a schedule recover part of what a single later crawl would miss.
 
 Blygger refuses replies, counts, a follower graph and ranking. It leaves discovery and ranking to services built on top, so the attention loop it removes can come back from outside the protocol. We measure how concentrated the links between blygs are (quotes, stubs, forks) and how that changes over time.
 
