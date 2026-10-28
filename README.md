@@ -18,6 +18,19 @@ Blygger refuses replies, counts, a follower graph and ranking. It leaves discove
 
 The dashboard and the written chapter (Verso, its own package) come later. Agents: read `AGENTS.md`; models: `llms.txt`.
 
+## The path through it
+
+The repo and its site follow one path, in Bunge's order: a problem stated in terms of measurement, then the concept, the math, and the application.
+
+1. **The question:** what is being asked and how it is measured.
+2. **The model:** a blyg, then the network of blygs, and where history sits.
+3. **The proof:** which part of the network's history the protocol keeps.
+4. **The data:** what the crawls show, and what they cannot see.
+
+## Builds on
+
+The Blygger conformance toolkit (github.com/blygger/blygger-spec, PR #11, by Aneesh Sathe) already crawls the directory and draws a network report. Its question is conformance: do blygs follow the spec? This repo asks a different one, about concentration and history over time, and reuses that work where it can.
+
 ## What is claimed and what is not
 
 - The Lean files model the spec as written, a pre-1.0 draft. They say nothing about any client or about whether a publisher keeps its promises (hosting can lapse).
