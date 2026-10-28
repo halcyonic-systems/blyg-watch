@@ -37,12 +37,26 @@
     </nav>
   </header>
 
+  <section class="wrap block" aria-labelledby="why-h">
+    <h2 id="why-h">Why Lean, and why now</h2>
+    <p class="sub">Blygger is pre-1.0, and its spec says to assume "no promises" until then. That is the cheapest time to check a design: its guarantees are short statements, its eleven clients are not, and a contradiction found now can still change the spec. One has already turned up: §16.8 refuses a mention relation for links, while §10.3a and §15.4 add one.</p>
+    <dl class="rows">
+      <div class="rows-head" aria-hidden="true"><span>Precedent</span><span>What it shows</span></div>
+      <div><dt><a href="https://vitalik.eth.limo/general/2026/05/18/fv.html">Buterin, 2026</a></dt><dd>Formal verification pays off where "the goal is much simpler than the implementation", and works by stating intent several ways and checking they agree. blyg-watch states it three ways: the model, the Lean, the crawl.</dd></div>
+      <div><dt><a href="https://lamport.azurewebsites.net/tla/formal-methods-amazon.pdf">Newcombe et al., Amazon, 2015</a></dt><dd>Checking designs with TLA+ caught serious bugs before code shipped, one needing a trace of 35 high-level steps.</dd></div>
+      <div><dt><a href="https://tls13tamarin.github.io/TLS13Tamarin/docs/tls13tamarin.pdf">Cremers et al., TLS 1.3, 2016</a></dt><dd>A machine-checked analysis of a draft found an attack the working group confirmed before the standard was final.</dd></div>
+      <div><dt><a href="https://arxiv.org/abs/2407.01688">Cedar, Amazon, 2024</a></dt><dd>A Lean model with proofs, paired with testing the real implementation against it. blyg-watch pairs Lean with a crawl of real blygs.</dd></div>
+      <div><dt><a href="https://arxiv.org/abs/1707.01747">Gomes, Kleppmann et al., 2017</a></dt><dd>Replicated-data algorithms proven in Isabelle, after many published ones turned out wrong. The closest precedent for a decentralized system's guarantees.</dd></div>
+    </dl>
+    <p class="note">On names: "Lean Ethereum" means a leaner protocol, a simplification program with formal verification as one of its values (<a href="https://blog.ethereum.org/2025/07/31/lean-ethereum">Drake, 2025</a>). Lean the prover is the tool some of that work uses. Venkatesh Rao kept Blygger's spec minimal on purpose; stating its guarantees formally is the same simplify-then-verify pairing, at much smaller stakes.</p>
+  </section>
+
   <section class="wrap block" aria-labelledby="p-h">
     <h2 id="p-h">What this step will hold</h2>
     <dl class="rows">
       <div><dt>Recoverable links</dt><dd>Which links a crawl made later can still find, from latest and pinned versions.</dd></div>
       <div><dt>Links only a snapshot keeps</dt><dd>Which links are lost to a later crawl, for example through an unpinned older version or a withdrawal. <span class="cite">§8.4, §9</span></dd></div>
-      <div><dt>Where it will live</dt><dd>The <code>Blygger/</code> folder, built with <code>lake build</code>.</dd></div>
+      <div><dt>Where it will live</dt><dd>The <a href="proof/journal/">proof journal</a>, checked by Lean every time the site is built.</dd></div>
     </dl>
   </section>
   <section class="wrap block" aria-labelledby="pn-h">
