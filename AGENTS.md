@@ -1,6 +1,6 @@
-# AGENTS.md — blyg-watch
+# AGENTS.md: blyg-watch
 
-Read this first, then `README.md`. One question drives the repo: will Blygger stay decentralized as it grows? Everything here serves that question or is left out.
+Read this first, then `README.md`. One question drives the repo: will Blygger stay decentralized as it grows?
 
 ## Order of work
 Question, then concept, then math, then application:
@@ -9,7 +9,7 @@ Question, then concept, then math, then application:
 3. **Application:** the measurement in `crawl/` and `data/`, then the dashboard.
 
 ## Rules
-- **Shingai writes the Lean.** Explain, point to the spec section, show the error and what it means; never write a proof or definition for him to paste.
+- **Shingai writes the Lean.** Explain, point to the spec section, show the error and what it means; never write a proof or definition for Shingai to paste.
 - **Claims:** never call anything proven unless `lake build` passes on it. Say what is not claimed: the Lean models spec v0.4 as written (a pre-1.0 draft), not any client and not whether a publisher keeps a promise. Model runs are conditional.
 - **Cite the spec by section** (`docs/protocol-v0.4.md` in github.com/blygger/blygger-spec), with a short quote.
 - **No live crawling** until crawl etiquette is settled and written here. Develop against the conformance samples in blygger-spec (`conformance/schemas/samples/`).
