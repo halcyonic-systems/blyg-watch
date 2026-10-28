@@ -1,0 +1,16 @@
+name = "journal"
+defaultTargets = ["Journal", "generate-journal"]
+
+[[require]]
+name = "verso"
+git = "https://github.com/leanprover/verso.git"
+rev = "v4.28.0"
+
+# The entries: Verso documents, checked by Lean when this library builds.
+[[lean_lib]]
+name = "Journal"
+
+# Turns the checked entries into HTML.
+[[lean_exe]]
+name = "generate-journal"
+root = "Main"
