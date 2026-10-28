@@ -8,7 +8,7 @@
 
 ## Parts
 - [Lean proof journal](journal/): spec v0.4 guarantees and what a later crawl can recover, written entry by entry (begun)
-- [Models](model/): Facets models of a blyg and of the network (not yet)
+- [Models](model/): Facets models of a blyg and of the network (drafted, in review)
 - [Measurement](crawl/): crawler, metrics and dated snapshots in data/ (not yet)
 
 ## Sources

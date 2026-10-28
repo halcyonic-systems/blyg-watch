@@ -43,13 +43,13 @@ No indicator ranks a person or a blyg. With 25 blygs even an unnamed concentrati
 In Bunge's order: a problem stated in terms of measurement, then the concept, the math, the application.
 
 1. **The question**, above.
-2. **The model** (`model/`, not yet): Facets models of a blyg and of the network. They name the flows the measurement counts and show where history sits.
+2. **The model** (`model/`, drafted, in review): Facets models of a blyg and of the network. They name the flows the measurement counts and show where history sits.
 3. **The proof** (`journal/`, begun): Lean statements of the spec's guarantees, proving which links a later crawl can recover and which only a dated snapshot keeps.
 4. **The data** (`crawl/`, `data/`, not yet): dated snapshots of the public list and the concentration measured from them. The dashboard grows out of this step.
 
 ## The site
 
-`site/` is one static page with no build step, laid out like this README: the question and the reader's job, the four steps of the path with their status, what the crawl cannot see, and the indicators. A GitHub Actions workflow publishes `site/` to GitHub Pages once the repo is public. Later, the Data step becomes the dashboard, drawing its charts from `data/*.json`, and the Verso chapter is published as its own linked page.
+`site/` is plain HTML and CSS with no build step: a short front page, one page per step of the path (`question.html`, `model.html`, `proof.html`, `data.html`), and the proof journal, which Verso generates into `site/proof/journal/` (see `journal/README.md`). A GitHub Actions workflow publishes `site/` to GitHub Pages once the repo is public. Later, the Data step becomes the dashboard, drawing its charts from `data/*.json`. It will be served at halcyonic.systems/blyg-watch/, under the organization's existing custom domain.
 
 Agents read `AGENTS.md`; language models start at `llms.txt`.
 
