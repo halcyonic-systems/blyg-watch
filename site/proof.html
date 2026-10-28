@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Proof · blyg-watch</title>
+<meta name="description" content="Step 3 of blyg-watch: Lean statements of the Blygger spec's guarantees.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="bar">
+  <div class="wrap bar-in">
+    <a class="mark" href="index.html">blyg-watch</a>
+    <nav aria-label="Path">
+      <a class="n-question" href="question.html"><span class="n-num">1</span>Question</a>
+      <a class="n-model" href="model.html"><span class="n-num">2</span>Model</a>
+      <a class="n-proof" href="proof.html" aria-current="page"><span class="n-num">3</span>Proof</a>
+      <a class="n-data" href="data.html"><span class="n-num">4</span>Data</a>
+    </nav>
+  </div>
+</header>
+
+<main class="sub-page s-proof">
+  <header class="page-head wrap">
+    <p class="kicker k-step"><span class="num-inline" aria-hidden="true">3</span>Step 3 of 4</p>
+    <h1>Proof</h1>
+    <p class="lede">Lean statements of the spec's guarantees: which links a later crawl can recover, and which only a dated snapshot keeps.</p>
+    <p class="status-line"><span class="chip chip-neutral">Not yet</span> Nothing here is built yet.</p>
+  </header>
+
+  <section class="wrap block" aria-labelledby="p-h">
+    <h2 id="p-h">What this step will hold</h2>
+    <dl class="rows">
+      <div><dt>Recoverable links</dt><dd>Which links a crawl made later can still find, from latest and pinned versions.</dd></div>
+      <div><dt>Links only a snapshot keeps</dt><dd>Which links are lost to a later crawl, for example through an unpinned older version or a withdrawal. <span class="cite">§8.4, §9</span></dd></div>
+      <div><dt>Where it will live</dt><dd>The <code>Blygger/</code> folder, built with <code>lake build</code>.</dd></div>
+    </dl>
+  </section>
+  <section class="wrap block" aria-labelledby="pn-h">
+    <h2 id="pn-h">What is not claimed</h2>
+    <ul class="plain">
+      <li>The Lean work models <a href="https://github.com/blygger/blygger-spec/blob/main/docs/protocol-v0.4.md">spec v0.4</a> as written, a pre-1.0 draft.</li>
+      <li>It says nothing about any client, or about whether a publisher keeps its promises. Hosting can lapse.</li>
+      <li>Nothing is proven until <code>lake build</code> checks it.</li>
+    </ul>
+  </section>
+
+  <nav class="pager wrap" aria-label="Steps">
+    <a class="pg pg-prev" href="model.html"><span class="pg-k">Previous</span>2. Model</a>
+    <a class="pg pg-next" href="data.html"><span class="pg-k">Next</span>4. Data</a>
+  </nav>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot-meta">
+      <a href="https://github.com/halcyonic-systems/blyg-watch">Source on GitHub</a>
+      <span>Section numbers refer to Blygger spec v0.4, a pre-1.0 draft.</span>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Data · blyg-watch</title>
+<meta name="description" content="Step 4 of blyg-watch: dated snapshots of the Blygger public list and the indicators measured from them.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="bar">
+  <div class="wrap bar-in">
+    <a class="mark" href="index.html">blyg-watch</a>
+    <nav aria-label="Path">
+      <a class="n-question" href="question.html"><span class="n-num">1</span>Question</a>
+      <a class="n-model" href="model.html"><span class="n-num">2</span>Model</a>
+      <a class="n-proof" href="proof.html"><span class="n-num">3</span>Proof</a>
+      <a class="n-data" href="data.html" aria-current="page"><span class="n-num">4</span>Data</a>
+    </nav>
+  </div>
+</header>
+
+<main class="sub-page s-data">
+  <header class="page-head wrap">
+    <p class="kicker k-step"><span class="num-inline" aria-hidden="true">4</span>Step 4 of 4</p>
+    <h1>Data</h1>
+    <p class="lede">Dated snapshots of the public list of blygs, and the indicators measured from them. The dashboard grows out of this step.</p>
+    <p class="status-line"><span class="chip chip-neutral">Not yet</span> Nothing here is built yet.</p>
+  </header>
+
+  <section class="wrap block" aria-labelledby="d-h">
+    <h2 id="d-h">What this step will hold</h2>
+    <dl class="rows">
+      <div><dt>Snapshots</dt><dd>Crawls of every blyg on blygger.com's <code>blygs.opml</code>, which lists 25 today, on a schedule and dated.</dd></div>
+      <div><dt>Indicators</dt><dd>The seven from <a href="question.html#indicators">step 1</a>, each measured per snapshot.</dd></div>
+      <div><dt>Where it will live</dt><dd>The <code>crawl/</code> and <code>data/</code> folders. Charts read <code>data/*.json</code>.</dd></div>
+    </dl>
+  </section>
+  <section class="wrap block" aria-labelledby="db-h">
+    <h2 id="db-h">Builds on</h2>
+    <p class="sub">The Blygger <a href="https://github.com/blygger/blygger-spec/pull/11">conformance toolkit</a> by Aneesh Sathe already crawls the directory and draws a network report. Its question is whether blygs follow the spec. This step asks about concentration and history over time, and reuses that work where it can.</p>
+  </section>
+  <section class="wrap block" aria-labelledby="dn-h">
+    <h2 id="dn-h">What is not claimed</h2>
+    <ul class="plain">
+      <li>Measurements cover the blygs on the public list at each snapshot, not every blyg that exists.</li>
+      <li>No figure names or ranks a person or a blyg.</li>
+    </ul>
+  </section>
+
+  <nav class="pager wrap" aria-label="Steps">
+    <a class="pg pg-prev" href="proof.html"><span class="pg-k">Previous</span>3. Proof</a>
+    <a class="pg pg-next" href="index.html"><span class="pg-k">Back</span>Overview</a>
+  </nav>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot-meta">
+      <a href="https://github.com/halcyonic-systems/blyg-watch">Source on GitHub</a>
+      <span>Section numbers refer to Blygger spec v0.4, a pre-1.0 draft.</span>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

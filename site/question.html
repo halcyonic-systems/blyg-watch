@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Will Blygger stay decentralized as it grows? · blyg-watch</title>
+<meta name="description" content="The question blyg-watch asks, what a crawl of the Blygger network cannot see, and the seven indicators.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="bar">
+  <div class="wrap bar-in">
+    <a class="mark" href="index.html">blyg-watch</a>
+    <nav aria-label="Path">
+      <a class="n-question" href="question.html" aria-current="page"><span class="n-num">1</span>Question</a>
+      <a class="n-model" href="model.html"><span class="n-num">2</span>Model</a>
+      <a class="n-proof" href="proof.html"><span class="n-num">3</span>Proof</a>
+      <a class="n-data" href="data.html"><span class="n-num">4</span>Data</a>
+    </nav>
+  </div>
+</header>
+
+<main class="sub-page s-question">
+  <header class="page-head wrap">
+    <p class="kicker k-step"><span class="num-inline" aria-hidden="true">1</span>Step 1 of 4</p>
+    <h1>Will Blygger stay decentralized as it grows?</h1>
+    <p class="lede">Blygger leaves discovery and ranking to services built on top, so the attention loop it removes could come back from outside the protocol. blyg-watch will measure how concentrated the links between blygs are and how that changes over time. A quote copies a passage from another blyg. A stub is a new item that declares itself a response to one item elsewhere; the protocol has no reply. A fork starts a new item from a pinned version of someone else's. Quotes carry most of the conversation, and a quote is never read as approval.</p>
+    <p class="status-line"><span class="chip chip-on">Written</span> The question is stated. Nothing is measured yet.</p>
+  </header>
+
+  <div class="wrap toc-wrap">
+    <nav class="toc" aria-label="On this page">
+      <a href="#seen">What the crawl cannot see</a>
+      <a href="#feed">Detect, never feed</a>
+      <a href="#indicators">The seven indicators</a>
+    </nav>
+  </div>
+
+  <section id="seen" class="wrap block" aria-labelledby="seen-h">
+    <h2 id="seen-h">What the crawl cannot see</h2>
+    <p class="sub">The protocol forgets part of the answer by design. The crawl sees every blyg on the public list, every item in each archive index, and the links in each item's latest and pinned versions. It does not see these five.</p>
+    <dl class="rows">
+      <div><dt>Older versions of an item, unless pinned</dt><dd>No route serves an unpinned older version. <span class="cite">§8.4</span></dd></div>
+      <div><dt>Quotes and stubs in an item later withdrawn</dt><dd>Withdrawal drops <code>stub_of</code>, <code>generated</code> and <code>transclusions</code>. <span class="cite">§9</span></dd></div>
+      <div><dt>Who links to a blyg</dt><dd>Mentions go to each blyg's inbox, not to its public files.</dd></div>
+      <div><dt>Who follows whom</dt><dd>Subscriptions are private, and there is no follower graph. <span class="cite">§16.8</span></dd></div>
+      <div><dt>Blygs not on the public list</dt><dd>The crawl starts from blygger.com's <code>blygs.opml</code>, which lists 25 blygs.</dd></div>
+    </dl>
+    <p class="note">Snapshots on a schedule recover part of what a single later crawl would miss. That is step 4.</p>
+  </section>
+
+  <section id="feed" class="wrap block" aria-labelledby="feed-h">
+    <h2 id="feed-h">Detect, never feed</h2>
+    <p class="sub">Blygger refuses counts on purpose. A machine-readable list of who responded is "the first surface a count could attach to", and a reader may order what it reads provided "nothing derived is published". <span class="cite">§16.6d</span> In <a href="https://www.youtube.com/watch?v=_fX0oiYQ5kk">his talk on Blygger</a>, Venkatesh Rao says mentions are listed, never counted, and that a client which rolls them up privately is its own business. So clients may count privately; this tool watches for published counts and publishes none.</p>
+    <p class="sub">A public leaderboard of who is quoted would bring back the loop the protocol removes. So every indicator tracks a harm the spec itself names, and cites the passage. No indicator ranks a person or a blyg.</p>
+  </section>
+
+  <section id="indicators" class="wrap block" aria-labelledby="ind-h">
+    <h2 id="ind-h">The seven indicators</h2>
+    <p class="sub">Each one, and the spec passage that names its harm.</p>
+    <dl class="rows">
+      <div><dt>How many blygs depend on one client or one host</dt><dd>"Anything that can serve files can serve a blyg" <span class="cite">§1, §4</span></dd></div>
+      <div><dt>Client diversity over time</dt><dd>The generator string is "the only census of the ecosystem that exists without anyone registering anything" <span class="cite">§3.2</span></dd></div>
+      <div><dt>Share of cross-blyg quotes that point at unpinned versions</dt><dd>"every unpinned remote quote is a veto held by a stranger" <span class="cite">§10.2</span></dd></div>
+      <div><dt>Share of stubs with no editorial content</dt><dd>Stubs without a response fill "every target's response signal with non-responses" <span class="cite">§10.6</span></dd></div>
+      <div><dt>Items that re-emit others' content</dt><dd>An aggregator "never re-emits" and never stubs for its members <span class="cite">§13.5</span></dd></div>
+      <div><dt>Blygs reachable only through the public list, against those reachable through blogrolls</dt><dd>The blogroll "claims no completeness" <span class="cite">§11</span></dd></div>
+      <div><dt>One network-wide measure of how skewed links are, with no names</dt><dd>Attention concentrating on a few origins <span class="cite">§16.8</span></dd></div>
+    </dl>
+    <p class="note">With 25 blygs even an unnamed concentration figure points at someone, so the last indicator is shown as a trend only until the network is larger. The list goes to the protocol's authors for comment before the first full crawl.</p>
+  </section>
+
+  <nav class="pager wrap" aria-label="Steps">
+    <a class="pg pg-prev" href="index.html"><span class="pg-k">Back</span>Overview</a>
+    <a class="pg pg-next" href="model.html"><span class="pg-k">Next</span>2. Model</a>
+  </nav>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot-meta">
+      <a href="https://github.com/halcyonic-systems/blyg-watch">Source on GitHub</a>
+      <span>Section numbers refer to Blygger spec v0.4, a pre-1.0 draft.</span>
+    </div>
+  </div>
+</footer>
+</body>
+</html>
