@@ -27,14 +27,24 @@
   <header class="page-head wrap">
     <p class="kicker k-step"><span class="num-inline" aria-hidden="true">1</span>Step 1 of 4</p>
     <h1>Will Blygger stay decentralized as it grows?</h1>
-    <p class="lede">Blygger leaves discovery and ranking to services built on top, so the attention loop it removes could come back from outside the protocol. blyg-watch will measure how concentrated the links between blygs are and how that changes over time. A quote copies a passage from another blyg. A stub is a new item that declares itself a response to one item elsewhere; the protocol has no reply. A fork starts a new item from a pinned version of someone else's. Quotes carry most of the conversation, and a quote is never read as approval.</p>
-    <p class="status-line"><span class="chip chip-on">Written</span> The question is stated. Nothing is measured yet.</p>
+    <p class="lede">Blygger leaves discovery and ranking to services built on top, so the attention loop it removes could come back from outside the protocol. blyg-watch will measure how concentrated the links between blygs are, and how that changes over time.</p>
+    <ul class="kinds" aria-label="The three kinds of link">
+      <li><svg class="sw" viewBox="0 0 28 12" aria-hidden="true"><path class="l-quote" d="M2,6 H26"/></svg><span><b>Quote</b> copies a passage from another blyg. Most of the conversation, and never read as approval.</span></li>
+      <li><svg class="sw" viewBox="0 0 28 12" aria-hidden="true"><path class="l-stub" d="M2,6 H26"/></svg><span><b>Stub</b> a new item declaring itself a response to one item elsewhere. The protocol has no reply.</span></li>
+      <li><svg class="sw" viewBox="0 0 28 12" aria-hidden="true"><path class="l-fork" d="M2,6 H26"/></svg><span><b>Fork</b> a new item started from a pinned version of someone else's.</span></li>
+    </ul>
+    <nav class="progress" aria-label="Where blyg-watch stands">
+      <a class="pr pr-question pr-done" href="question.html" aria-current="page"><span class="pr-bar" aria-hidden="true"></span><span class="pr-l"><span class="pr-n">1</span> Question</span><span class="pr-s">Stated</span></a>
+      <a class="pr pr-model" href="model.html"><span class="pr-bar" aria-hidden="true"></span><span class="pr-l"><span class="pr-n">2</span> Model</span><span class="pr-s">Next</span></a>
+      <a class="pr pr-proof" href="proof.html"><span class="pr-bar" aria-hidden="true"></span><span class="pr-l"><span class="pr-n">3</span> Proof</span><span class="pr-s">Next</span></a>
+      <a class="pr pr-data" href="data.html"><span class="pr-bar" aria-hidden="true"></span><span class="pr-l"><span class="pr-n">4</span> Data</span><span class="pr-s">After the authors see the indicators</span></a>
+    </nav>
   </header>
 
   <div class="wrap toc-wrap">
     <nav class="toc" aria-label="On this page">
       <a href="#seen">What the crawl cannot see</a>
-      <a href="#feed">Detect, never feed</a>
+      <a href="#feed">Our rule</a>
       <a href="#indicators">The seven indicators</a>
     </nav>
   </div>
@@ -43,6 +53,7 @@
     <h2 id="seen-h">What the crawl cannot see</h2>
     <p class="sub">The protocol forgets part of the answer by design. The crawl sees every blyg on the public list, every item in each archive index, and the links in each item's latest and pinned versions. It does not see these five.</p>
     <dl class="rows">
+      <div class="rows-head" aria-hidden="true"><span>Not visible</span><span>Why</span></div>
       <div><dt>Older versions of an item, unless pinned</dt><dd>No route serves an unpinned older version. <span class="cite">§8.4</span></dd></div>
       <div><dt>Quotes and stubs in an item later withdrawn</dt><dd>Withdrawal drops <code>stub_of</code>, <code>generated</code> and <code>transclusions</code>. <span class="cite">§9</span></dd></div>
       <div><dt>Who links to a blyg</dt><dd>Mentions go to each blyg's inbox, not to its public files.</dd></div>
@@ -53,15 +64,17 @@
   </section>
 
   <section id="feed" class="wrap block" aria-labelledby="feed-h">
-    <h2 id="feed-h">Detect, never feed</h2>
-    <p class="sub">Blygger refuses counts on purpose. A machine-readable list of who responded is "the first surface a count could attach to", and a reader may order what it reads provided "nothing derived is published". <span class="cite">§16.6d</span> In <a href="https://www.youtube.com/watch?v=_fX0oiYQ5kk">his talk on Blygger</a>, Venkatesh Rao says mentions are listed, never counted, and that a client which rolls them up privately is its own business. So clients may count privately; this tool watches for published counts and publishes none.</p>
-    <p class="sub">A public leaderboard of who is quoted would bring back the loop the protocol removes. So every indicator tracks a harm the spec itself names, and cites the passage. No indicator ranks a person or a blyg.</p>
+    <h2 id="feed-h">Our rule: detect, never feed</h2>
+    <p class="sub">Blygger refuses counts on purpose. A machine-readable list of who responded is "the first surface a count could attach to", and a reader may order what it reads provided "nothing derived is published". <span class="cite">§16.6d</span></p>
+    <p class="callout">In <a href="https://www.youtube.com/watch?v=_fX0oiYQ5kk">his talk on Blygger</a>, Venkatesh Rao says mentions are listed, never counted, and that a client which rolls them up privately is its own business.</p>
+    <p class="sub">So clients may count privately; blyg-watch watches for published counts and publishes none. Every indicator tracks a harm the spec itself names, and no indicator ranks a person or a blyg.</p>
   </section>
 
   <section id="indicators" class="wrap block" aria-labelledby="ind-h">
     <h2 id="ind-h">The seven indicators</h2>
     <p class="sub">Each one, and the spec passage that names its harm.</p>
     <dl class="rows">
+      <div class="rows-head" aria-hidden="true"><span>Indicator</span><span>The spec's warning</span></div>
       <div><dt>How many blygs depend on one client or one host</dt><dd>"Anything that can serve files can serve a blyg" <span class="cite">§1, §4</span></dd></div>
       <div><dt>Client diversity over time</dt><dd>The generator string is "the only census of the ecosystem that exists without anyone registering anything" <span class="cite">§3.2</span></dd></div>
       <div><dt>Share of cross-blyg quotes that point at unpinned versions</dt><dd>"every unpinned remote quote is a veto held by a stranger" <span class="cite">§10.2</span></dd></div>

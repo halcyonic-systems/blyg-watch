@@ -141,23 +141,6 @@ h2 { font-size: 30px; line-height: 1.15; }
 .sw .l-quote, .sw .l-stub, .sw .l-fork, .sw .l-unseen { stroke-width: 2.5; }
 .sw .blyg { stroke-width: 1.5; }
 
-/* the question band: one neutral surface step, hairlines top and bottom */
-.band { background: var(--paper-2); border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule); padding: 56px 0; }
-.cols { display: grid; gap: 40px; }
-@media (min-width: 960px) { .cols { grid-template-columns: 6fr 5fr; gap: 64px; align-items: end; } }
-.band h2 { font-size: clamp(30px, 3.4vw, 40px); max-width: 24ch; }
-.band h2 + p { margin-top: 16px; color: var(--ink-2); max-width: 56ch; }
-.k-question { color: var(--c-question); }
-.principle { margin-top: 20px; font-size: 14px; color: var(--ink-2); max-width: 56ch; }
-.tag { font-weight: 600; color: var(--ink); margin-right: 4px; }
-.roadmap { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--rule); }
-.roadmap li { border-bottom: 1px solid var(--rule); }
-.roadmap a { display: grid; grid-template-columns: 28px 76px 1fr; gap: 8px; align-items: baseline; padding: 12px 0; color: inherit; text-decoration: none; }
-.roadmap a:hover .rm-h { text-decoration: underline; text-underline-offset: 3px; }
-.num-inline { font-family: var(--display); font-weight: 700; font-size: 24px; line-height: 1; }
-.rm-h { font-weight: 600; font-size: 15px; }
-.rm-s { font-size: 14px; color: var(--mute); }
-.rm-done { color: var(--ink); font-weight: 500; }
 /* path */
 .path { padding-top: 64px; padding-bottom: 72px; }
 .steps { list-style: none; margin: 32px 0 0; padding: 0; display: grid; grid-template-columns: 1fr; border-top: 1px solid var(--rule); }
@@ -234,3 +217,38 @@ h2 { font-size: 30px; line-height: 1.15; }
 .refs { display: flex; flex-wrap: wrap; gap: 4px 24px; }
 .foot-meta { display: flex; flex-wrap: wrap; gap: 8px 24px; color: var(--mute); font-size: 12px; }
 .foot-meta a { color: var(--ink-2); }
+
+/* where it stands: one bar per step, filled when done, in the step's hue */
+.progress { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 8px; margin-top: 32px; max-width: 560px; }
+.pr { display: flex; flex-direction: column; gap: 6px; color: inherit; text-decoration: none; min-width: 0; }
+.pr-bar { height: 6px; border-radius: 3px; border: 1.5px solid var(--pr); background: transparent; }
+.pr-done .pr-bar { background: var(--pr); }
+.pr-l { font-size: 14px; font-weight: 600; color: var(--ink); }
+.pr-n { font: 700 17px/1 var(--display); color: var(--pr); }
+.pr-s { font-size: 13px; line-height: 1.35; color: var(--mute); }
+.pr[aria-current="page"] .pr-l { text-decoration: underline; text-decoration-color: var(--pr); text-decoration-thickness: 2px; text-underline-offset: 4px; }
+.pr:hover .pr-l { text-decoration: underline; text-underline-offset: 4px; }
+.pr-question { --pr: var(--c-question); }
+.pr-model { --pr: var(--c-model); }
+.pr-proof { --pr: var(--c-proof); }
+.pr-data { --pr: var(--c-data); }
+.page-head .progress { margin-top: 28px; }
+
+/* readable rows: a framed list with a header row and a surface step on alternate rows */
+.rows { border: 1px solid var(--rule); border-radius: var(--r-md, 8px); overflow: hidden; background: var(--paper); }
+.rows > div { padding: 14px 20px; }
+.rows > div:nth-child(even) { background: var(--paper-2); }
+.rows > div:last-child { border-bottom: 0; }
+.rows-head { display: none !important; }
+@media (min-width: 720px) {
+  .rows-head { display: grid !important; grid-template-columns: minmax(0, 5fr) minmax(0, 6fr); gap: 32px; background: var(--paper-3) !important; padding: 10px 20px !important; font-size: 11px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: var(--mute); border-bottom: 1px solid var(--rule-strong) !important; }
+}
+.block { padding-top: 56px; }
+
+/* the three kinds of link, keyed to the figure */
+.kinds { list-style: none; margin: 24px 0 0; padding: 0; display: grid; gap: 10px; max-width: 64ch; }
+.kinds li { display: grid; grid-template-columns: 36px 1fr; align-items: baseline; color: var(--ink-2); }
+.kinds b { color: var(--ink); margin-right: 6px; }
+.kinds .sw { align-self: center; }
+
+.callout { margin: 16px 0; padding: 12px 0 12px 20px; border-left: 3px solid var(--c-step); max-width: 64ch; font-size: 17px; color: var(--ink); }
