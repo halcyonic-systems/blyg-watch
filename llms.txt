@@ -1,0 +1,17 @@
+# blyg-watch
+
+> Watching the Blygger publishing network (https://blygger.org) as a system. First question: will Blygger stay decentralized as it grows? Three parts that depend on each other: Facets models name what to measure, Lean states which history the protocol keeps, and dated crawls measure concentration across the public list of blygs.
+
+## Start
+- [README](README.md): the question, the three parts, what is not claimed
+- [AGENTS.md](AGENTS.md): order of work and rules for agents
+
+## Parts
+- [Lean](Blygger/): spec v0.4 guarantees and what a later crawl can recover (not yet)
+- [Models](model/): Facets models of a blyg and of the network (not yet)
+- [Measurement](crawl/): crawler, metrics and dated snapshots in data/ (not yet)
+
+## Sources
+- [Blygger spec v0.4](https://github.com/blygger/blygger-spec/blob/main/docs/protocol-v0.4.md): the normative draft
+- [Conformance toolkit, PR #11](https://github.com/blygger/blygger-spec/pull/11): samples, properties and an existing network crawler
+- [Public list of blygs](https://blygger.com/blygs.opml): the crawl seed

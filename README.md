@@ -12,11 +12,11 @@ Blygger refuses replies, counts, a follower graph and ranking. It leaves discove
 
 | Part | What it does | Folder |
 |---|---|---|
-| Lean | States the protocol's guarantees from spec v0.4 and proves which links a later crawl can recover and which only a dated snapshot keeps | `Blygger/` |
-| Facets models | The single blyg and the network of blygs; names the flows the dashboard measures | `model/` |
-| Measurement | Crawls the public blyg list, saves dated snapshots, computes concentration | `crawl/`, `data/` |
+| Lean | States the protocol's guarantees from spec v0.4 and proves which links a later crawl can recover and which only a dated snapshot keeps | `Blygger/` (not yet) |
+| Facets models | The single blyg and the network of blygs; names the flows the dashboard measures | `model/` (not yet) |
+| Measurement | Crawls the public blyg list, saves dated snapshots, computes concentration | `crawl/`, `data/` (not yet) |
 
-The dashboard and the written chapter (Verso, its own package) come later.
+The dashboard and the written chapter (Verso, its own package) come later. Agents: read `AGENTS.md`; models: `llms.txt`.
 
 ## What is claimed and what is not
 
