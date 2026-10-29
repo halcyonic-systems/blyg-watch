@@ -18,6 +18,6 @@ Question, then concept, then math, then application:
 - **Snapshots are append-only.** A file under `data/` is never edited after its date.
 - **Names match.** A measured series carries the name of the model flow it measures; a test checks this.
 - **Public data only.** Everything read is published on the blygs themselves. Nothing private, no inferred identities.
-- **Site:** `site/` stays plain HTML and CSS, light first, Frost colours, radius 8px or less, no shadows, readable at 390px wide. It says only what the README says. The repo goes public, and Pages goes on, when the indicator list is offered to the protocol's authors, not before.
+- **Site:** `site/` stays plain HTML and CSS, light first, Frost colours, radius 8px or less, no shadows, readable at 390px wide. The latest-entry links on the front page and the Proof page are written by `journal/build.sh`; never edit between the `latest-entry` markers by hand. It says only what the README says. The repo goes public, and Pages goes on, when the indicator list is offered to the protocol's authors, not before.
 - **Git:** commit at each working milestone, one line on what changed and a body on why. Never push, never change the repo's visibility, never post anywhere without Shingai's go at the time.
 - **Plain register, no em dashes** in anything a reader outside the repo will see.

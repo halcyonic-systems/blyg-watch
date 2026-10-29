@@ -252,3 +252,5 @@ h2 { font-size: 30px; line-height: 1.15; }
 .kinds .sw { align-self: center; }
 
 .callout { margin: 16px 0; padding: 12px 0 12px 20px; border-left: 3px solid var(--c-step); max-width: 64ch; font-size: 17px; color: var(--ink); }
+
+.latest { margin-top: 16px; }
