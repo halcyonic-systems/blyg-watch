@@ -36,7 +36,7 @@ So this tool detects that loop and never feeds it. Every indicator tracks a warn
 | The blogroll "claims no completeness" | §11 | Blygs reachable only through the public list, against blygs reachable through blogrolls |
 | Attention concentrating on a few origins | §16.8 | One network-wide measure of how skewed links are, with no names |
 
-No indicator ranks a person or a blyg. With 25 blygs even an unnamed concentration figure points at someone, so the last row is shown as a trend only until the network is larger. The indicator list is offered to the protocol's authors for comment before the first full crawl.
+No indicator ranks a person or a blyg. With 25 blygs even an unnamed concentration figure points at someone, so the last row is shown as a trend only until the network is larger. The indicator list was offered to the protocol's authors on 2026-10-29. The indicators are blyg-watch's own choice, kept independent of the spec, so the watch does not shape what it watches.
 
 ## The path
 
