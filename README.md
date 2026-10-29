@@ -2,7 +2,7 @@
 
 Watching the Blygger publishing network (https://blygger.org) as a system.
 
-## The first question
+## Research question 1
 
 **Will Blygger stay decentralized as it grows?**
 
