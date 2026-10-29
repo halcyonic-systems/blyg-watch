@@ -38,6 +38,10 @@ So this tool detects that loop and never feeds it. Every indicator tracks a warn
 
 No indicator ranks a person or a blyg. With 25 blygs even an unnamed concentration figure points at someone, so the last row is shown as a trend only until the network is larger. The indicator list was offered to the protocol's authors on 2026-10-29. The indicators are blyg-watch's own choice, kept independent of the spec, so the watch does not shape what it watches.
 
+## An independent sensor
+
+blyg-watch is a sensor outside the thing it measures. Its indicators are its own choice, kept apart from the spec's design so the watch does not shape what it watches. It reads the network as any subscriber does and publishes nothing into it: measurements appear on this site, never as blyg items.
+
 ## The path
 
 In Bunge's order: a problem stated in terms of measurement, then the concept, the math, the application.
@@ -45,7 +49,7 @@ In Bunge's order: a problem stated in terms of measurement, then the concept, th
 1. **The question**, above.
 2. **The model** (`model/`, drafted, in review): Facets models of a blyg and of the network. They name the flows the measurement counts and show where history sits.
 3. **The proof** (`journal/`, begun): Lean statements of the spec's guarantees, proving which links a later crawl can recover and which only a dated snapshot keeps.
-4. **The data** (`crawl/`, `data/`, not yet): dated snapshots of the public list and the concentration measured from them. The dashboard grows out of this step.
+4. **The data** (`crawl/` built, `data/` from the first snapshot): a reader that subscribes to every listed blyg writes one dated snapshot a week (`crawl/README.md`), and the concentration is measured from them. The dashboard grows out of this step.
 
 ## The site
 
