@@ -32,17 +32,17 @@
       <a class="pr pr-question pr-done" href="question.html"><span class="pr-bar" aria-hidden="true"></span><span class="pr-l"><span class="pr-n">1</span> Question</span><span class="pr-s">Stated</span></a>
       <a class="pr pr-model" href="model.html"><span class="pr-bar" aria-hidden="true"></span><span class="pr-l"><span class="pr-n">2</span> Model</span><span class="pr-s">Three candidates, in review</span></a>
       <a class="pr pr-proof" href="proof.html"><span class="pr-bar" aria-hidden="true"></span><span class="pr-l"><span class="pr-n">3</span> Proof</span><span class="pr-s">Journal open</span></a>
-      <a class="pr pr-data" href="data.html" aria-current="page"><span class="pr-bar" aria-hidden="true"></span><span class="pr-l"><span class="pr-n">4</span> Data</span><span class="pr-s">Collection being designed</span></a>
+      <a class="pr pr-data" href="data.html" aria-current="page"><span class="pr-bar" aria-hidden="true"></span><span class="pr-l"><span class="pr-n">4</span> Data</span><span class="pr-s">Reader built, first snapshot next</span></a>
     </nav>
   </header>
 
   <section class="wrap block" aria-labelledby="d-h">
     <h2 id="d-h">What this step will hold</h2>
     <dl class="rows">
-      <div><dt>Snapshots</dt><dd>Dated reads of every blyg on blygger.com's <code>blygs.opml</code>, which lists 25 today. How they are collected is being designed: a reader that subscribes to every blyg, plus one read of each archive index for the history a feed does not carry.</dd></div>
+      <div><dt>Snapshots</dt><dd>Dated reads of every blyg on blygger.com's <code>blygs.opml</code>, which lists 25 today. They are collected by a reader that subscribes to every blyg, once a week, one request at a time, and publishes nothing into the network. Its first run reads every item once, for the history a feed does not carry.</dd></div>
       <div><dt>Indicators</dt><dd>The seven from <a href="question.html#indicators">step 1</a>, each measured per snapshot.</dd></div>
       <div><dt>Charts</dt><dd>Each indicator over time as a line; client and host shares as bars (software, not people); the network's link structure drawn as a graph without names, shown only if it cannot be read as a ranking (an open decision).</dd></div>
-      <div><dt>Where it will live</dt><dd>The <code>crawl/</code> and <code>data/</code> folders. Charts read <code>data/*.json</code>.</dd></div>
+      <div><dt>Where it lives</dt><dd>The reader is in <code>crawl/</code>, with its etiquette and what it keeps in <code>crawl/README.md</code>. Snapshots go in <code>data/</code>, one dated file a week, never edited. Charts will read them.</dd></div>
     </dl>
   </section>
   <section class="wrap block" aria-labelledby="db-h">
@@ -54,6 +54,7 @@
     <ul class="plain">
       <li>Measurements cover the blygs on the public list at each snapshot, not every blyg that exists.</li>
       <li>No figure names or ranks a person or a blyg.</li>
+      <li>Snapshots keep links, never the text of anyone's items.</li>
     </ul>
   </section>
 
