@@ -9,7 +9,7 @@ Facets models of the Blygger network, in Facets' system language (SL). They name
 | `candidate-b-ranking-inside.sl` | Candidate: Discovery and ranking services inside the boundary, so the system of interest is the attention ecosystem and concentration reads as its own feedback. |
 | `candidate-d-functional.sl` | Candidate: the network as five work processes (Publishing, Archive as a stock, Linking, Notification, Discovery) with named pass-ways and no governance subsystem. Shows how the network works, not between whom. |
 
-The two candidates sit beside the draft until Shingai rules on which reading leads. A minimal candidate (links and the one loop only) was dropped on 2026-10-29: it could not name five of the seven indicators.
+How the three read together (2026-10-29, open to Shingai's ruling): D is the model, the network by function inside an opaque ecosystem, since the crawl cannot see inside ranking services. B is the counterfactual, the system once ranking has been absorbed, matching the scenario in which services rank. `blygger-network.sl` is the between-whom view, the blygs in their roles, which is the structure the dashboard measures. A minimal candidate (links and the one loop only) was dropped on 2026-10-29: it could not name five of the seven indicators.
 
 The question shows up as one loop through the outside: Cited blyg → `archive index` → Discovery and ranking services → `ranking` → People → `publish event` → Responding blyg, which draws on the Cited blyg again. The protocol carries no ranking (§16.6d, §16.8); if one published outside it takes hold, links concentrate.
 
