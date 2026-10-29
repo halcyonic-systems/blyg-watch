@@ -6,6 +6,10 @@ Facets models of the Blygger network, in Facets' system language (SL). They name
 |---|---|
 | `blygger-network.sl` | The network as the system of interest. Inside: one pair of blygs, a Responding blyg and a Cited blyg (any blyg plays both roles). Outside: People, Clients, Hosts, the Public list (blygs.opml), Discovery and ranking services, and Unserved history. |
 | `blyg.sl` | One blyg, one level down: the interior of the Responding blyg (`decomposes`), updated from the spec v0.3 model to v0.4. |
+| `candidate-b-ranking-inside.sl` | Candidate: Discovery and ranking services inside the boundary, so the system of interest is the attention ecosystem and concentration reads as its own feedback. |
+| `candidate-d-functional.sl` | Candidate: the network as five work processes (Publishing, Archive as a stock, Linking, Notification, Discovery) with named pass-ways and no governance subsystem. Shows how the network works, not between whom. |
+
+The two candidates sit beside the draft until Shingai rules on which reading leads. A minimal candidate (links and the one loop only) was dropped on 2026-10-29: it could not name five of the seven indicators.
 
 The question shows up as one loop through the outside: Cited blyg → `archive index` → Discovery and ranking services → `ranking` → People → `publish event` → Responding blyg, which draws on the Cited blyg again. The protocol carries no ranking (§16.6d, §16.8); if one published outside it takes hold, links concentrate.
 
